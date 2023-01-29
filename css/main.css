@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+/* || RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONT */
+    --FF: 'Outfit', sans-serif;
+    --FS: 15px;
+    --FW: 700;
+
+    /* COLOR */
+    --BGCOLOR: hsl(212, 45%, 89%);
+    --CARD-BGCOLOR: #fff;
+    --H1-COLOR: #000;
+    --P-COLOR: gray;
+    --A-COLOR: hsl(228, 45%, 44%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOR: #000;
+        --CARD-BGCOLOR: #333;
+        --H1-COLOR: #fff;
+        --P-COLOR: gray;
+    }
+}
+
+/* || GENERAL */
+body {
+    font-family: var(--FF);
+    max-width: 1440px;
+    height: 100vh;
+    background-color: var(--BGCOLOR);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Utility Classes */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/* || QR CODE CARD */
+.main {
+    width: 322px;
+    height: 497px;
+    background-color: var(--CARD-BGCOLOR);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 15px;
+}
+
+section {
+    padding-bottom: 30px;
+}
+
+.main_section2 {
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.main_section2 .main_h1 {
+    margin-bottom: 20px;
+    font-weight: var(--FW);
+    color: var(--H1-COLOR);
+}
+
+.main_section2 p {
+    color: var(--P-COLOR);
+    font-size: var(--FS);
+}
+
+.attribution { 
+    font-size: 11px; 
+    color: var(--H1-COLOR);
+}
+.attribution a { 
+    color: var(--A-COLOR); 
+}
